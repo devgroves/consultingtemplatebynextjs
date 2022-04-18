@@ -10,11 +10,11 @@ export default function Contact() {
           <Image src={Image1} alt="Contact" />
         </Row>
         <Row style={{ width: "80%" }} className="center">
-          <Col>
-            <h6>Email Id: abc@gmail.com</h6>{" "}
+          <Col md={6} sm={12}>
+            <h4>Email Id: abc@gmail.com</h4>{" "}
           </Col>
-          <Col>
-            <h6>Contact Us: +91-96292-30494</h6>
+          <Col md={6} sm={12}>
+            <h4>Contact Us: +91-96292-30494</h4>
           </Col>
         </Row>
       </Container>

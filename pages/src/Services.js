@@ -9,10 +9,10 @@ export default function Services() {
           <Col md={6} sm={12}>
             <Image src={Image1} alt="Picture of the author" />
           </Col>
-          <Col>
+          <Col md={6} sm={12}>
             <div className="text-container">
               <h2>We offer the below services:</h2>
-              <p>
+              <>
                 <ul>
                   <li>
                     <span>Build static and dynamic responsive website&nbsp;</span>
@@ -27,7 +27,7 @@ export default function Services() {
                     <span>Create ChatBots for conversational requirements with apis</span>
                   </li>
                 </ul>
-              </p>
+              </>
             </div>
           </Col>
         </Row>

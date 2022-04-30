@@ -2,9 +2,18 @@ import React from "react";
 import Image from "next/image";
 import Image1 from "./images/3.png";
 import { Container, Row, Col } from "react-bootstrap";
+import Head from "next/head";
 export default function About() {
   return (
     <>
+      <Head>
+        <title>Services</title>
+        <link rel="icon" href="./images/logo.png" />
+        <meta
+          name="description"
+          content=" We contribute open source technical solutions to organizations and learning tutorials for developers to learn."
+        />
+      </Head>
       <Container>
         <Row className="center container-height">
           <Col md={6} sm={12}>

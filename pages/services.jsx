@@ -2,9 +2,19 @@ import React from "react";
 import Image from "next/image";
 import Image1 from "./images/2.png";
 import { Container, Row, Col } from "react-bootstrap";
+import Head from "next/head";
+
 export default function Services() {
   return (
     <>
+      <Head>
+        <title>Services</title>
+        <link rel="icon" href="./images/logo.png" />
+        <meta
+          name="description"
+          content="We offer the below services.Build static and dynamic responsive website.Enterprise grade REST APIs develop using Java or node.Js technologies,Write Technical Blogs on multiple sites,Create ChatBots for conversational requirements with apis"
+        />
+      </Head>
       <Container>
         <Row className="center container-height">
           <Col md={6} sm={12}>

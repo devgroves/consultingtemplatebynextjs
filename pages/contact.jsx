@@ -1,11 +1,11 @@
 import React from "react";
 import Image from "next/image";
-import Image1 from "./contact.png";
+import Image1 from "./images/contact.png";
 import { Container, Row, Col } from "react-bootstrap";
 export default function Contact() {
   return (
     <>
-      <Container id="contact" className="center" style={{ flexDirection: "column" }}>
+      <Container id="contact" className="center container-height" style={{ flexDirection: "column" }}>
         <Row style={{ width: "80%" }}>
           <Image src={Image1} alt="Contact" />
         </Row>

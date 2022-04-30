@@ -1,11 +1,12 @@
+import React from "react";
 import Image from "next/image";
-import Image1 from "./services-1.jpg";
+import Image1 from "./images/2.png";
 import { Container, Row, Col } from "react-bootstrap";
 export default function Services() {
   return (
-    <div>
-      <Container id="service">
-        <Row className="center">
+    <>
+      <Container>
+        <Row className="center container-height">
           <Col md={6} sm={12}>
             <Image src={Image1} alt="Picture of the author" />
           </Col>
@@ -32,6 +33,6 @@ export default function Services() {
           </Col>
         </Row>
       </Container>
-    </div>
+    </>
   );
 }

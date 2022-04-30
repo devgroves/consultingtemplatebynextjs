@@ -1,12 +1,12 @@
 import React from "react";
 import Image from "next/image";
-import Image1 from "./services-1.jpg";
+import Image1 from "./images/1.png";
 import { Container, Row, Col } from "react-bootstrap";
-export default function Details() {
+export default function Home() {
   return (
-    <div>
-      <Container id="introduction">
-        <Row className="center">
+    <>
+      <Container>
+        <Row className="center container-height">
           <Col md={6} sm={12}>
             <h3>DevGroves is group of devs synergized to built performance efficient technical solutions.</h3>
             <p style={{ textAlign: "justify" }}>
@@ -19,6 +19,6 @@ export default function Details() {
           </Col>
         </Row>
       </Container>
-    </div>
+    </>
   );
 }

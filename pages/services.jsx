@@ -3,6 +3,8 @@ import Image from "next/image";
 import Image1 from "./images/2.png";
 import { Container, Row, Col } from "react-bootstrap";
 import Head from "next/head";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 export default function Services() {
   return (
@@ -15,6 +17,7 @@ export default function Services() {
           content="We offer the below services.Build static and dynamic responsive website.Enterprise grade REST APIs develop using Java or node.Js technologies,Write Technical Blogs on multiple sites,Create ChatBots for conversational requirements with apis"
         />
       </Head>
+      <Header />
       <Container>
         <Row className="center container-height">
           <Col md={6} sm={12}>
@@ -26,16 +29,23 @@ export default function Services() {
               <>
                 <ul>
                   <li>
-                    <span>Build static and dynamic responsive website&nbsp;</span>
+                    <span>
+                      Build static and dynamic responsive website&nbsp;
+                    </span>
                   </li>
                   <li>
-                    <span>Enterprise grade REST APIs develop using Java or node.Js technologies.</span>
+                    <span>
+                      Enterprise grade REST APIs develop using Java or node.Js
+                      technologies.
+                    </span>
                   </li>
                   <li>
                     <span>Write Technical Blogs on multiple sites</span>
                   </li>
                   <li>
-                    <span>Create ChatBots for conversational requirements with apis</span>
+                    <span>
+                      Create ChatBots for conversational requirements with apis
+                    </span>
                   </li>
                 </ul>
               </>
@@ -43,6 +53,7 @@ export default function Services() {
           </Col>
         </Row>
       </Container>
+      <Footer />
     </>
   );
 }

@@ -8,12 +8,11 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Home</title>
+        <title>DevGroves - Home Page</title>
         <link rel="icon" href="./images/logo.png" />
         <meta
           name="description"
-          content=" We work for consultancies, organizations and freelancers closely work with them to solve the technical
-          problems also offer them the programming services."
+          content="We work for consultancies, organizations and freelancers to build web applications, rest apis and provide performance efficient solutions."
         />
       </Head>
       <Container>
@@ -21,8 +20,7 @@ export default function Home() {
           <Col md={6} sm={12}>
             <h3>DevGroves is group of devs synergized to built performance efficient technical solutions.</h3>
             <p style={{ textAlign: "justify" }}>
-              We work for consultancies, organizations and freelancers closely work with them to solve the technical
-              problems also offer them the programming services.
+            We work for consultancies, organizations and freelancers to build web applications, rest apis and provide performance efficient solutions.
             </p>
           </Col>
           <Col md={6} sm={12}>

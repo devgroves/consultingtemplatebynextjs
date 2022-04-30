@@ -10,14 +10,13 @@ export default function Header() {
   };
   return (
     <>
-      <Navbar collapseOnSelect expand="lg" bg="light" variant="light" sticky="top">
+      <Navbar className="navbar-bg" collapseOnSelect expand="lg" variant="light">
         <Container>
           <Navbar.Brand onClick={() => navigate("home")}>
             <Image src={Logo} alt="DevGroves" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="me-auto"></Nav>
             <Nav>
               <Nav.Link onClick={() => navigate("home")}>Home</Nav.Link>
               <Nav.Link onClick={() => navigate("services")}>Services</Nav.Link>

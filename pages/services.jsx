@@ -8,7 +8,7 @@ export default function Services() {
   return (
     <>
       <Head>
-        <title>Services</title>
+        <title>Dev Groves - Services</title>
         <link rel="icon" href="./images/logo.png" />
         <meta
           name="description"

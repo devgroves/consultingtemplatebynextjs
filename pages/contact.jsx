@@ -1,10 +1,19 @@
 import React from "react";
 import Image from "next/image";
+import Head from "next/head";
 import Image1 from "./images/contact.png";
 import { Container, Row, Col } from "react-bootstrap";
 export default function Contact() {
   return (
     <>
+      <Head>
+        <title>Dev Groves - Contact Us</title>
+        <link rel="icon" href="./images/logo.png" />
+        <meta
+          name="description"
+          content="DevGroves - Contact Us"
+        />
+      </Head>
       <Container id="contact" className="center container-height" style={{ flexDirection: "column" }}>
         <Row style={{ width: "80%" }}>
           <Image src={Image1} alt="Contact" />

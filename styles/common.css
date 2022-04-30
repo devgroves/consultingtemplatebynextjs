@@ -7,3 +7,9 @@
 .container-height {
   height: 400px;
 }
+
+.navbar-bg {
+  background-color: white;
+  border-bottom: 1px solid whitesmoke !important;
+  margin: 0 550px;
+}

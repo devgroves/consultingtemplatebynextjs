@@ -7,7 +7,7 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>Services</title>
+        <title>DevGroves - About Us</title>
         <link rel="icon" href="./images/logo.png" />
         <meta
           name="description"

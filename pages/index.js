@@ -17,9 +17,9 @@ export default function Home() {
           content="We work for consultancies, organizations and freelancers to build web applications, rest apis and provide performance efficient solutions."
         />
       </Head>
-      <Header />
       <Container>
         <Row className="center container-height">
+          <Header />
           <Col md={6} sm={12}>
             <h3>
               DevGroves is group of devs synergized to built performance
@@ -38,9 +38,9 @@ export default function Home() {
               className="img-fluid"
             />
           </Col>
+          <Footer />
         </Row>
       </Container>
-      <Footer />
     </>
   );
 }

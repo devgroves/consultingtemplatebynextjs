@@ -14,16 +14,16 @@ export default function Contact() {
         <link rel="icon" href="./images/logo.png" />
         <meta name="description" content="DevGroves - Contact Us" />
       </Head>
-      <Header />
       <Container
         id="contact"
         className="center container-height"
         style={{ flexDirection: "column" }}
       >
-        <Row style={{ width: "80%" }}>
-          <Image src={Image1} alt="Contact" />
-        </Row>
         <Row style={{ width: "80%" }} className="center">
+          <Header />
+          <Row style={{ width: "80%" }}>
+            <Image src={Image1} alt="Contact" />
+          </Row>
           <Col md={6} sm={12}>
             <h4>Email Id: abc@gmail.com</h4>{" "}
           </Col>

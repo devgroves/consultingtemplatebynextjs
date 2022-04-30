@@ -3,6 +3,7 @@ import { Navbar, Container, Nav } from "react-bootstrap";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import Logo from "../pages/images/logo.png";
+
 export default function Header() {
   const router = useRouter();
   const navigate = (a) => {
@@ -10,7 +11,12 @@ export default function Header() {
   };
   return (
     <>
-      <Navbar className="navbar-bg" collapseOnSelect expand="lg" variant="light">
+      <Navbar
+        className="navbar-bg"
+        collapseOnSelect
+        expand="lg"
+        variant="light"
+      >
         <Container>
           <Navbar.Brand onClick={() => navigate("home")}>
             <Image src={Logo} alt="DevGroves" />
@@ -18,7 +24,7 @@ export default function Header() {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav>
-              <Nav.Link onClick={() => navigate("home")}>Home</Nav.Link>
+              <Nav.Link onClick={() => navigate("")}>Home</Nav.Link>
               <Nav.Link onClick={() => navigate("services")}>Services</Nav.Link>
               <Nav.Link onClick={() => navigate("about")}>About</Nav.Link>
               <Nav.Link onClick={() => navigate("contact")}>Contact</Nav.Link>

@@ -17,9 +17,9 @@ export default function About() {
           content=" We contribute open source technical solutions to organizations and learning tutorials for developers to learn."
         />
       </Head>
-      <Header />
       <Container>
         <Row className="center container-height">
+          <Header />
           <Col md={6} sm={12}>
             <h3>
               {" "}

@@ -17,13 +17,11 @@ export default function Services() {
           content="We offer the below services.Build static and dynamic responsive website.Enterprise grade REST APIs develop using Java or node.Js technologies,Write Technical Blogs on multiple sites,Create ChatBots for conversational requirements with apis"
         />
       </Head>
-      <Header />
       <Container>
         <Row className="center container-height">
+          <Header />
           <Col md={6} sm={12}>
             <Image src={Image1} alt="Picture of the author" />
-          </Col>
-          <Col md={6} sm={12}>
             <div className="text-container">
               <h2>We offer the below services:</h2>
               <>
@@ -50,10 +48,10 @@ export default function Services() {
                 </ul>
               </>
             </div>
+            <Footer />
           </Col>
         </Row>
       </Container>
-      <Footer />
     </>
   );
 }

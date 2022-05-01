@@ -22,6 +22,8 @@ export default function Services() {
           <Header />
           <Col md={6} sm={12}>
             <Image src={Image1} alt="Picture of the author" />
+          </Col>
+          <Col md={6} sm={12}>  
             <div className="text-container">
               <h2>We offer the below services:</h2>
               <>
@@ -48,8 +50,8 @@ export default function Services() {
                 </ul>
               </>
             </div>
-            <Footer />
           </Col>
+          <Footer />
         </Row>
       </Container>
     </>

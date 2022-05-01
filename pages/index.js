@@ -11,7 +11,6 @@ export default function Home() {
     <>
       <Head>
         <title>DevGroves - Home Page</title>
-        <link rel="icon" href="./images/logo.png" />
         <meta
           name="description"
           content="We work for consultancies, organizations and freelancers to build web applications, rest apis and provide performance efficient solutions."

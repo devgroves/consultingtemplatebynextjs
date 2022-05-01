@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar, Container, Nav } from "react-bootstrap";
+import { Navbar, Container, Nav, Row } from "react-bootstrap";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import Logo from "../pages/images/logo.png";
@@ -11,27 +11,25 @@ export default function Header() {
   };
   return (
     <>
-      <Navbar
-        className="navbar-bg"
-        collapseOnSelect
-        expand="lg"
-        variant="light"
-      >
-        <Container>
-          <Navbar.Brand onClick={() => navigate("home")}>
-            <Image src={Logo} alt="DevGroves" />
+      <Container>
+        <Navbar
+          className="navbar-bg"
+          expand="lg"
+          variant="light"
+        >
+          <Navbar.Brand onClick={() => navigate("home")} >
+            <Image src={Logo} alt="DevGroves" width="90" height="70"/>
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Nav>
               <Nav.Link onClick={() => navigate("")}>Home</Nav.Link>
               <Nav.Link onClick={() => navigate("services")}>Services</Nav.Link>
               <Nav.Link onClick={() => navigate("about")}>About</Nav.Link>
               <Nav.Link onClick={() => navigate("contact")}>Contact</Nav.Link>
             </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
+        </Navbar>
+        <hr></hr>
+      </Container>
     </>
   );
 }

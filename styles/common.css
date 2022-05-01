@@ -8,8 +8,37 @@
   height: 400px;
 }
 
+.navbar-nav a {
+  font-size: 24px;
+}
+
 .navbar-bg {
   background-color: white;
-  border-bottom: 1px solid whitesmoke !important;
-  margin: 0 550px;
+  height: 70px;
+  margin: 0 50px;
+}
+
+.navbar  a:hover {
+  color: cadetblue;
+  font-size: 26px;
+}
+
+.navbar-nav  a:active {
+  color: red;
+  font-size: 32px;
+}
+
+.navbar-nav  a:visited {
+  color: red;
+  font-size: 32px;
+}
+
+.imgContain {
+  height: 90% !important;
+  width: 90% !important;
+  max-height: 90% !important;
+  max-width: 90% !important;
+  min-height: 90% !important;
+  min-width: 90% !important;
+  margin: 10px !important;
 }

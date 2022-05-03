@@ -14,18 +14,23 @@ export default function Home() {
         <link rel="icon" href="favicon.ico" type="image/x-icon" />
         <meta
           name="description"
-          content="We work for consultancies, organizations and freelancers to build web applications, rest apis and provide performance efficient solutions."
+          content="We work for consultancies, organizations and freelancers to build web applications, rest apis and chat bots."
         />
       </Head>
       <Header />
       <Container>
         <Row className="center container-height">
-          <Col md={6} sm={12}>
-            <h3>DevGroves is group of devs synergized to built performance efficient technical solutions.</h3>
+          <Col className="zeropadding" md={6} sm={12}>
+            <h2>DevGroves is a dev community synergized to built performance efficient technical solutions.</h2>
+            <br/>
+            <h6 style={{ textAlign: "justify" }}>
+              We work for consultancies, organizations and freelancers to build web applications, rest apis and 
+              chat bots.</h6>
+            <br/>
             <p style={{ textAlign: "justify" }}>
-              We work for consultancies, organizations and freelancers to build web applications, rest apis and provide
-              performance efficient solutions.
-            </p>
+              Developers working from different software companies with like minded connecting together to provide solutions without technical bottlenecks</p>
+            <p style={{ textAlign: "justify" }}>
+              As we have senior dev peoples, we can work on technically intensive code development. Also make the cross platform desktop and mobile solutions using web technologies.</p>
           </Col>
           <Col md={6} sm={12}>
             <Image src={Image1} alt="Picture of the author" className="img-fluid" height={250} />

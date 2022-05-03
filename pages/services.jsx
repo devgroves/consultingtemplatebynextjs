@@ -22,20 +22,21 @@ export default function Services() {
         <Row className="center container-height">
           <Col md={6} sm={12}>
             <div className="text-container">
-              <h2>We offer the below services:</h2>
+              <h3>As a startup, we are providing the below services: </h3>
+              <br/>
               <>
                 <ul>
                   <li>
-                    <span>Build static and dynamic responsive website&nbsp;</span>
+                    <span>Build static and dynamic responsive websites. Static sites can be developed using javascript technologies like angular, react or jQuery. Dynamic sites like payroll, CRM, or job portals.&nbsp;</span>
                   </li>
                   <li>
-                    <span>Enterprise grade REST APIs develop using Java or node.Js technologies.</span>
+                    <span>Enterprise grade REST APIs developed using Java or nodeJs technologies with scalability. We develop distributed architecture of microservices with Elastic Load Balancers.</span>
                   </li>
                   <li>
-                    <span>Write Technical Blogs on multiple sites</span>
+                    <span>Write Technical Content Blogs on multiple sites. Technical Blogs will be benchmarking the technologies, doing the POC and exploring the features of the framework.</span>
                   </li>
                   <li>
-                    <span>Create ChatBots for conversational requirements with apis</span>
+                    <span>Create ChatBots for conversational requirements with apis. Also stock alert kind of chat bots.</span>
                   </li>
                 </ul>
               </>

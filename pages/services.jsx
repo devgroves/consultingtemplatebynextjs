@@ -20,9 +20,6 @@ export default function Services() {
       <Header />
       <Container>
         <Row className="center container-height">
-          <Col md={6} sm={12}>
-            <Image src={Image1} alt="Picture of the author" />
-          </Col>
           <Col md={6} sm={12}>  
             <div className="text-container">
               <h2>We offer the below services:</h2>
@@ -50,6 +47,9 @@ export default function Services() {
                 </ul>
               </>
             </div>
+          </Col>
+          <Col md={6} sm={12}>
+            <Image src={Image1} alt="Picture of the author" />
           </Col>
         </Row>
       </Container>

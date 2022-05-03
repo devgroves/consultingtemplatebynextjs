@@ -37,7 +37,6 @@ export default function About() {
             <Image
               src={Image1}
               alt="Picture of the author"
-              className="img-fluid"
             />
           </Col>
         </Row>

@@ -35,7 +35,7 @@ export default function Home() {
             <Image
               src={Image1}
               alt="Picture of the author"
-              className="img-fluid"
+              className="img-fluid imgContain"
             />
           </Col>
         </Row>

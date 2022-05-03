@@ -4,8 +4,9 @@
   justify-content: center;
 }
 
-.container-height {
+.container .container-height {
   height: 400px;
+  margin: 0 50px;
 }
 
 .navbar-nav a {
@@ -16,6 +17,7 @@
   background-color: white;
   height: 70px;
   margin: 0 50px;
+  padding: 0;
 }
 
 .navbar-light .navbar-nav  a:hover {
@@ -32,7 +34,17 @@
   margin: 10px !important;
 }
 
+img.brandlogo {
+  top: 5px !important;
+  margin: 0 !important;
+  object-fit: cover !important;
+}
+
 .container .navbar-light .navbar-nav  a.activeNav {
   color: white;
   background-color: cadetblue;
+}
+
+.zeroMargin {
+  margin: 0;
 }

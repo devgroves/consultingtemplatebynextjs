@@ -15,7 +15,7 @@ export default function Header() {
       <Container>
         <Navbar className="navbar-bg">
           <Navbar.Brand onClick={() => navigate("home")} >
-            <Image src={Logo} alt="DevGroves" width="90" height="70"/>
+            <Image src={Logo} className="brandlogo" alt="DevGroves" width="90" height="70"/>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Nav>
@@ -25,7 +25,7 @@ export default function Header() {
               <Nav.Link className={`${router.pathname==="/contact" ? "activeNav" : ""}`} onClick={() => navigate("contact")}>Contact</Nav.Link>
             </Nav>
         </Navbar>
-        <hr></hr>
+        <hr className="zeroMargin"></hr>
       </Container>
     </>
   );

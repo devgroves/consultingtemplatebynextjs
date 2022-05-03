@@ -22,7 +22,7 @@ export default function Services() {
         <Row className="center container-height">
           <Col md={6} sm={12}>
             <div className="text-container">
-              <h3>As a startup, we are providing the below services: </h3>
+              <h2>Begin the journey, by providing the below services: </h2>
               <br/>
               <>
                 <ul>
@@ -43,7 +43,7 @@ export default function Services() {
             </div>
           </Col>
           <Col md={6} sm={12}>
-            <Image src={Image1} alt="Picture of the author" height={250} />
+            <Image src={Image1} alt="Services image" height={400} width={600}/>
           </Col>
         </Row>
       </Container>

@@ -23,15 +23,16 @@ export default function About() {
           <Col md={6} sm={12}>
             <h3>
               {" "}
-              We contribute open source technical solutions to organizations and learning tutorials for developers to
+              We contribute open source technical solutions and learning tutorials for developers to
               learn.
             </h3>
+            <br/>
             <p style={{ textAlign: "justify" }}>
               Please check us out in Github <a href="https://github.com/devgroves">https://github.com/devgroves</a>
             </p>
           </Col>
           <Col md={6} sm={12}>
-            <Image src={Image1} alt="Picture of the author" className="img-fluid" height={250} />
+            <Image src={Image1} alt="about image" height={400} width={600} />
           </Col>
         </Row>
       </Container>

@@ -5,12 +5,13 @@
 }
 
 .container .container-height {
-  height: 400px;
   margin: 0 50px;
+  height: 500px;
 }
 
 .navbar-nav a {
   font-size: 24px;
+  padding: 18px 40px;
 }
 
 .navbar-bg {

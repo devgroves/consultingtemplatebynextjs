@@ -18,11 +18,13 @@ export default function Contact() {
       <Container>
         <Row className="center container-height">
           <Col md={6} sm={12}>
-            <h4>Email Id: abc@gmail.com</h4>
-            <h4>Contact Us: +91-96292-30494</h4>
+            <h4>Email Id:</h4> <span>devgrovestechnologies@gmail.com</span>
+            <br/><br/>
+            <h4>Contact Us:</h4> +91-96292-30494
+            <br/><br/>
           </Col>
           <Col md={6} sm={12}>
-            <Image src={ContactUsImage} className="imgContain" layout="responsive" alt="Contact" height={450} />
+            <Image src={ContactUsImage} alt="Contact us image" height={400} width={600} />
           </Col>
         </Row>
       </Container>

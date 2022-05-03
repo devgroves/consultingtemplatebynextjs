@@ -11,15 +11,15 @@ export default function About() {
     <>
       <Head>
         <title>DevGroves - About Us</title>
-        <link rel="icon" href="./images/logo.png" />
+        <link rel="icon" href="favicon.ico" type="image/x-icon"/>
         <meta
           name="description"
           content=" We contribute open source technical solutions to organizations and learning tutorials for developers to learn."
         />
       </Head>
+      <Header />
       <Container>
         <Row className="center container-height">
-          <Header />
           <Col md={6} sm={12}>
             <h3>
               {" "}

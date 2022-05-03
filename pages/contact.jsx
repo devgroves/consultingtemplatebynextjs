@@ -11,7 +11,7 @@ export default function Contact() {
     <>
       <Head>
         <title>Dev Groves - Contact Us</title>
-        <link rel="icon" href="./images/logo.png" />
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
         <meta name="description" content="DevGroves - Contact Us" />
       </Head>
       <Header />

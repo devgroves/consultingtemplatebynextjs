@@ -15,16 +15,16 @@ export default function Contact() {
         <meta name="description" content="DevGroves - Contact Us" />
       </Head>
       <Header />
-      <Container >
-          <Row className="center container-height">
-            <Col md={6} sm={12}>
-              <h4>Email Id: abc@gmail.com</h4>
-              <h4>Contact Us: +91-96292-30494</h4>
-            </Col>
-            <Col md={6} sm={12} >
-              <Image src={ContactUsImage} layout="responsive" alt="Contact" />
-            </Col>
-          </Row>
+      <Container>
+        <Row className="center container-height">
+          <Col md={6} sm={12}>
+            <h4>Email Id: abc@gmail.com</h4>
+            <h4>Contact Us: +91-96292-30494</h4>
+          </Col>
+          <Col md={6} sm={12}>
+            <Image src={ContactUsImage} className="imgContain" layout="responsive" alt="Contact" height={450} />
+          </Col>
+        </Row>
       </Container>
       <Footer />
     </>

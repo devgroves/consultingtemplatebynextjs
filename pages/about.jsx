@@ -11,7 +11,7 @@ export default function About() {
     <>
       <Head>
         <title>DevGroves - About Us</title>
-        <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
         <meta
           name="description"
           content=" We contribute open source technical solutions to organizations and learning tutorials for developers to learn."
@@ -23,21 +23,15 @@ export default function About() {
           <Col md={6} sm={12}>
             <h3>
               {" "}
-              We contribute open source technical solutions to organizations and
-              learning tutorials for developers to learn.
+              We contribute open source technical solutions to organizations and learning tutorials for developers to
+              learn.
             </h3>
             <p style={{ textAlign: "justify" }}>
-              Please check us out in Github{" "}
-              <a href="https://github.com/devgroves">
-                https://github.com/devgroves
-              </a>
+              Please check us out in Github <a href="https://github.com/devgroves">https://github.com/devgroves</a>
             </p>
           </Col>
           <Col md={6} sm={12}>
-            <Image
-              src={Image1}
-              alt="Picture of the author"
-            />
+            <Image src={Image1} alt="Picture of the author" className="img-fluid" height={250} />
           </Col>
         </Row>
       </Container>

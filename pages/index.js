@@ -11,7 +11,7 @@ export default function Home() {
     <>
       <Head>
         <title>DevGroves - Home Page</title>
-        <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
         <meta
           name="description"
           content="We work for consultancies, organizations and freelancers to build web applications, rest apis and provide performance efficient solutions."
@@ -21,22 +21,14 @@ export default function Home() {
       <Container>
         <Row className="center container-height">
           <Col md={6} sm={12}>
-            <h3>
-              DevGroves is group of devs synergized to built performance
-              efficient technical solutions.
-            </h3>
+            <h3>DevGroves is group of devs synergized to built performance efficient technical solutions.</h3>
             <p style={{ textAlign: "justify" }}>
-              We work for consultancies, organizations and freelancers to build
-              web applications, rest apis and provide performance efficient
-              solutions.
+              We work for consultancies, organizations and freelancers to build web applications, rest apis and provide
+              performance efficient solutions.
             </p>
           </Col>
           <Col md={6} sm={12}>
-            <Image
-              src={Image1}
-              alt="Picture of the author"
-              className="img-fluid imgContain"
-            />
+            <Image src={Image1} alt="Picture of the author" className="img-fluid" height={250} />
           </Col>
         </Row>
       </Container>

@@ -42,7 +42,7 @@
 img.brandlogo {
   top: 5px !important;
   margin: 0 !important;
-  object-fit: cover !important;
+  object-fit: contain !important;
 }
 
 .container .navbar-light .navbar-nav  a.activeNav {

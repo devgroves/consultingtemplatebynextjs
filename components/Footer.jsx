@@ -7,7 +7,7 @@ export default function Footer() {
       <Container>
         <hr></hr>
         <footer className={styles.footer} >
-          Copyright @2021 DevGroves.
+          Copyright @2022 DevGroves Technologies.
         </footer>
       </Container>
     </>

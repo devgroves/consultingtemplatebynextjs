@@ -32,7 +32,9 @@ export default function About() {
             </p>
           </Col>
           <Col md={6} sm={12}>
-            <Image src={Image1} alt="about image" height={400} width={600} />
+            <div style={{ margin: '5px' }}> 
+              <Image src={Image1} alt="about image" height={400} width={600} />
+            </div>
           </Col>
         </Row>
       </Container>

@@ -33,7 +33,9 @@ export default function Home() {
               As we have senior dev peoples, we can work on technically intensive code development. Also make the cross platform desktop and mobile solutions using web technologies.</p>
           </Col>
           <Col md={6} sm={12}>
-            <Image src={Image1} alt="Home page picture" height={400} width={600} />
+            <div style={{ margin: '5px' }}> 
+              <Image src={Image1}  alt="Home page picture" height={400} width={600} />
+            </div>
           </Col>
         </Row>
       </Container>

@@ -24,7 +24,9 @@ export default function Contact() {
             <br/><br/>
           </Col>
           <Col md={6} sm={12}>
-            <Image src={ContactUsImage} alt="Contact us image" height={400} width={600} />
+            <div style={{ margin: '5px' }}> 
+              <Image src={ContactUsImage} alt="Contact us image" height={400} width={600} />
+            </div>
           </Col>
         </Row>
       </Container>

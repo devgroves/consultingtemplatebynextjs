@@ -27,6 +27,11 @@
   background-color: #5f9ea030;
 }
 
+.navbar-bg .navbar-brand {
+  margin-right: 0;
+  padding: 5px 10px;
+}
+
 img.brandlogo {
   top: 5px !important;
   margin: 0 !important;

@@ -5,6 +5,7 @@ import ContactUsImage from "./images/contactus.png";
 import { Container, Row, Col } from "react-bootstrap";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import Breadcrumbs from "../components/Breadcrumbs";
 
 export default function Contact() {
   return (
@@ -19,14 +20,15 @@ export default function Contact() {
         <Row className="center container-height">
           <Col md={6} sm={12}>
             <h4>Email Id:</h4> <span>devgrovestechnologies@gmail.com</span>
-            <br/><br/>
+            <br />
+            <br />
             <h4>Contact Us:</h4> +91-96292-30494
-            <br/><br/>
+            <br />
+            <br />
           </Col>
-          <Col md={6} sm={12}>
-            <div style={{ margin: '5px' }}> 
-              <Image src={ContactUsImage} alt="Contact us image" height={400} width={600} />
-            </div>
+          <Col md={6} sm={12} xs={{ order: "first" }} className="mobile-container">
+            <Image src={ContactUsImage} alt="Contact us image" height={400} width={600} className="imgContain" />
+            <Breadcrumbs name="Contact us" />
           </Col>
         </Row>
       </Container>

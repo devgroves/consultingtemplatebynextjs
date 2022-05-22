@@ -5,6 +5,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import Head from "next/head";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import Breadcrumbs from "./../components/Breadcrumbs";
 
 export default function Home() {
   return (
@@ -22,20 +23,23 @@ export default function Home() {
         <Row className="center container-height">
           <Col className="zeropadding" md={6} sm={12}>
             <h2>DevGroves is a dev community synergized to built performance efficient technical solutions.</h2>
-            <br/>
+            <br />
             <h6 style={{ textAlign: "justify" }}>
-              We work for consultancies, organizations and freelancers to build web applications, rest apis and 
-              chat bots.</h6>
-            <br/>
+              We work for consultancies, organizations and freelancers to build web applications, rest apis and chatchat
+            </h6>
+            <br />
             <p style={{ textAlign: "justify" }}>
-              Developers working from different software companies with like minded connecting together to provide solutions without technical bottlenecks</p>
+              Developers working from different software companies with like minded connecting together to provide
+              solutions without technical bottlenecks
+            </p>
             <p style={{ textAlign: "justify" }}>
-              As we have senior dev peoples, we can work on technically intensive code development. Also make the cross platform desktop and mobile solutions using web technologies.</p>
+              As we have senior dev peoples, we can work on technically intensiv code development. Also make the cross
+              platform desktop and mobile solutions using web technologies.
+            </p>
           </Col>
-          <Col md={6} sm={12}>
-            <div style={{ margin: '5px' }}> 
-              <Image src={Image1}  alt="Home page picture" height={400} width={600} />
-            </div>
+          <Col md={6} sm={12} xs={{ order: "first" }} className="mobile-container">
+            <Image src={Image1} alt="Home page picture" height={400} width={600} className="imgContain" />
+            <Breadcrumbs name="Home" />
           </Col>
         </Row>
       </Container>

@@ -5,6 +5,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import Head from "next/head";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import Breadcrumbs from "../components/Breadcrumbs";
 
 export default function About() {
   return (
@@ -21,20 +22,15 @@ export default function About() {
       <Container>
         <Row className="center container-height">
           <Col md={6} sm={12}>
-            <h3>
-              {" "}
-              We contribute open source technical solutions and learning tutorials for developers to
-              learn.
-            </h3>
-            <br/>
+            <h3> We contribute open source technical solutions and learning tutorials for developers to learn.</h3>
+            <br />
             <p style={{ textAlign: "justify" }}>
               Please check us out in Github <a href="https://github.com/devgroves">https://github.com/devgroves</a>
             </p>
           </Col>
-          <Col md={6} sm={12}>
-            <div style={{ margin: '5px' }}> 
-              <Image src={Image1} alt="about image" height={400} width={600} />
-            </div>
+          <Col md={6} sm={12} xs={{ order: "first" }} className="mobile-container">
+            <Image src={Image1} alt="about image" height={400} width={600} className="imgContain" />
+            <Breadcrumbs name="About Us" />
           </Col>
         </Row>
       </Container>

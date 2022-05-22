@@ -33,7 +33,7 @@
 }
 
 .zeropadding {
-  padding: 0;
+  padding: 0 !important;
 }
 
 .navbar-light .navbar-nav a:hover {
@@ -42,12 +42,12 @@
 
 .imgContain {
   height: 90% !important;
-  width: 90% !important;
+  width: 100% !important;
   max-height: 90% !important;
-  max-width: 90% !important;
+  max-width: 100% !important;
   min-height: 90% !important;
-  min-width: 90% !important;
-  margin: 10px !important;
+  min-width: 100% !important;
+  margin: 0 10px !important;
 }
 
 img.brandlogo {
@@ -63,6 +63,10 @@ img.brandlogo {
 
 .zeroMargin {
   margin: 0;
+}
+
+.bottomMargin {
+  margin: 0 0 5px 0;
 }
 
 ul li {

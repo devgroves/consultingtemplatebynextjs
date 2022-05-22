@@ -21,16 +21,16 @@ export default function About() {
       <Header />
       <Container>
         <Row className="center container-height">
-          <Col md={6} sm={12}>
+          <Col md={6} sm={12} className="mobile-container">
+            <Image src={Image1} alt="about image" height={400} width={600} className="imgContain" />
+            <Breadcrumbs name="About Us" />
+          </Col>
+          <Col className="zeropadding" md={6} sm={12}>
             <h3> We contribute open source technical solutions and learning tutorials for developers to learn.</h3>
             <br />
             <p style={{ textAlign: "justify" }}>
               Please check us out in Github <a href="https://github.com/devgroves">https://github.com/devgroves</a>
             </p>
-          </Col>
-          <Col md={6} sm={12} xs={{ order: "first" }} className="mobile-container">
-            <Image src={Image1} alt="about image" height={400} width={600} className="imgContain" />
-            <Breadcrumbs name="About Us" />
           </Col>
         </Row>
       </Container>

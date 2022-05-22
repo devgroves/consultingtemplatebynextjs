@@ -18,17 +18,17 @@ export default function Contact() {
       <Header />
       <Container>
         <Row className="center container-height">
-          <Col md={6} sm={12}>
+        <Col md={6} sm={12} className="mobile-container">
+            <Image src={ContactUsImage} alt="Contact us image" height={400} width={600} className="imgContain" />
+            <Breadcrumbs name="Contact us" />
+          </Col>
+          <Col className="zeropadding" md={6} sm={12}>
             <h4>Email Id:</h4> <span>devgrovestechnologies@gmail.com</span>
             <br />
             <br />
             <h4>Contact Us:</h4> +91-96292-30494
             <br />
             <br />
-          </Col>
-          <Col md={6} sm={12} xs={{ order: "first" }} className="mobile-container">
-            <Image src={ContactUsImage} alt="Contact us image" height={400} width={600} className="imgContain" />
-            <Breadcrumbs name="Contact us" />
           </Col>
         </Row>
       </Container>

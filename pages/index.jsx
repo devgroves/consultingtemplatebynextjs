@@ -5,6 +5,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import Head from "next/head";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import Breadcrumbs from "./../components/Breadcrumbs";
 
 export default function Home() {
   return (
@@ -20,6 +21,12 @@ export default function Home() {
       <Header />
       <Container>
         <Row className="center container-height">
+        <Col md={6} sm={12} className="mobile-container">
+            <div > 
+              <Image src={Image1}  alt="Home page picture" height={400} width={600} className="imgContain"/>
+            </div>
+            <Breadcrumbs name="DevGroves Technologies" />
+          </Col>
           <Col className="zeropadding" md={6} sm={12}>
             <h2>DevGroves is a dev community synergized to built performance efficient technical solutions.</h2>
             <br/>
@@ -28,14 +35,10 @@ export default function Home() {
               chat bots.</h6>
             <br/>
             <p style={{ textAlign: "justify" }}>
-              Developers working from different software companies with like minded connecting together to provide solutions without technical bottlenecks</p>
+              Developers working from reputed software companies connected together to provide solutions by technically rational approach.</p>
             <p style={{ textAlign: "justify" }}>
               As we have senior dev peoples, we can work on technically intensive code development. Also make the cross platform desktop and mobile solutions using web technologies.</p>
-          </Col>
-          <Col md={6} sm={12}>
-            <div style={{ margin: '5px' }}> 
-              <Image src={Image1}  alt="Home page picture" height={400} width={600} />
-            </div>
+            <br/><br/><br/>  
           </Col>
         </Row>
       </Container>

@@ -21,7 +21,11 @@ export default function Services() {
       <Header />
       <Container>
         <Row className="center container-height">
-          <Col md={6} sm={12}>
+          <Col md={6} sm={12} className="mobile-container">
+            <Image src={Image1} alt="Services image" height={400} width={600} className="imgContain" />
+            <Breadcrumbs name="Services" />
+          </Col>
+          <Col className="zeropadding" md={6} sm={12}>
             <div className="text-container">
               <h2>Begin the journey, by providing the below services: </h2>
               <br />
@@ -53,10 +57,6 @@ export default function Services() {
                 </ul>
               </>
             </div>
-          </Col>
-          <Col md={6} sm={12} xs={{ order: "first" }} className="mobile-container">
-            <Image src={Image1} alt="Services image" height={400} width={600} className="imgContain" />
-            <Breadcrumbs name="Services" />
           </Col>
         </Row>
       </Container>

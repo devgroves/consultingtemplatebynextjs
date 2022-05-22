@@ -20,7 +20,6 @@ export default function Header() {
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
-              <Nav className="me-auto"></Nav>
               <Nav>
                 <Nav.Link className={`${router.pathname === "/" ? "activeNav" : ""}`} onClick={() => navigate("")}>
                   Home
@@ -47,7 +46,7 @@ export default function Header() {
             </Navbar.Collapse>
           </Container>
         </Navbar>
-        <hr className="zeroMargin"></hr>
+        <hr className="bottomMargin"></hr>
       </Container>
     </>
   );

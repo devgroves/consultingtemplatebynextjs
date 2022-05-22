@@ -28,7 +28,6 @@ export default function Services() {
           <Col className="zeropadding" md={6} sm={12}>
             <div className="text-container">
               <h2>Begin the journey, by providing the below services: </h2>
-              <br />
               <>
                 <ul>
                   <li>

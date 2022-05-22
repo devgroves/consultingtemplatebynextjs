@@ -21,13 +21,11 @@ export default function Home() {
       <Header />
       <Container>
         <Row className="center container-height">
-        <Col md={6} sm={12} className="mobile-container">
-            <div > 
-              <Image src={Image1}  alt="Home page picture" height={400} width={600} className="imgContain"/>
-            </div>
-            <Breadcrumbs name="DevGroves Technologies" />
+          <Col md={6} sm={12} className="mobile-container">
+              <Image src={Image1}  alt="Home page picture" height={400} width={600} className="zero-margin imgContain"/>
+              <Breadcrumbs name="DevGroves Technologies" />
           </Col>
-          <Col className="zeropadding" md={6} sm={12}>
+          <Col className="contentpadding" md={6} sm={12}>
             <h2>DevGroves is a dev community synergized to built performance efficient technical solutions.</h2>
             <br/>
             <h6 style={{ textAlign: "justify" }}>

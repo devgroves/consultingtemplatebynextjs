@@ -17,6 +17,12 @@ export default function About() {
           name="description"
           content=" We contribute open source technical solutions to organizations and learning tutorials for developers to learn."
         />
+        <meta
+          name="og:description"
+          content=" We contribute open source technical solutions to organizations and learning tutorials for developers to learn."
+        />
+        <meta name="title" content="DevGroves - About Us" />
+        <meta name="og:title" content="DevGroves - About Us" />
       </Head>
       <Header />
       <Container>

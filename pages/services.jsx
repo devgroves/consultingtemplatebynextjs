@@ -17,6 +17,16 @@ export default function Services() {
           name="description"
           content="We offer the below services.Build static and dynamic responsive website.Enterprise grade REST APIs develop using Java or node.Js technologies,Write Technical Blogs on multiple sites,Create ChatBots for conversational requirements with apis"
         />
+        <meta
+          name="og:description"
+          content="We offer the below services.Build static and dynamic responsive website.Enterprise grade REST APIs develop using Java or node.Js technologies,Write Technical Blogs on multiple sites,Create ChatBots for conversational requirements with apis"
+        />
+        <meta
+          name="title"
+          content="DevGroves - Offering Services"/>
+        <meta
+          name="og:title"
+          content="DevGroves - Offering Services"/>
       </Head>
       <Header />
       <Container>

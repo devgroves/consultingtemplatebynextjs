@@ -14,7 +14,19 @@ export default function Home() {
         <title>DevGroves - Home Page</title>
         <link rel="icon" href="favicon.ico" type="image/x-icon" />
         <meta
+          name="title"
+          content="DevGroves Technologies"
+        />
+        <meta
           name="description"
+          content="We work for consultancies, organizations and freelancers to build web applications, rest apis and chat bots."
+        />
+        <meta
+          name="og:title"
+          content="DevGroves Technologies"
+        />
+        <meta
+          name="og:description"
           content="We work for consultancies, organizations and freelancers to build web applications, rest apis and chat bots."
         />
       </Head>
@@ -22,7 +34,7 @@ export default function Home() {
       <Container>
         <Row className="center container-height">
           <Col md={6} sm={12} className="mobile-container">
-              <Image src={Image1}  alt="Home page picture" height={400} width={600} className="zero-margin imgContain"/>
+              <Image src={Image1}  alt="Home page picture" height={450} width={600} className="imgContain"/>
               <Breadcrumbs name="DevGroves Technologies" />
           </Col>
           <Col className="contentpadding" md={6} sm={12}>

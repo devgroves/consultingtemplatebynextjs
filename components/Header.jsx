@@ -16,7 +16,7 @@ export default function Header() {
         <Navbar collapseOnSelect expand="lg" className="navbar-bg">
           <Container>
             <Navbar.Brand onClick={() => navigate("/")}>
-              <Image src={Logo} className="brandlogo" alt="DevGroves" width="90" height="70" />
+              <Image src={Logo} className="brandlogo" alt="DevGroves" />
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">

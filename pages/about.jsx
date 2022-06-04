@@ -9,67 +9,23 @@ import Breadcrumbs from "../components/Breadcrumbs";
 import Devgroves from "./images/devgroves.png";
 import ShopCart from "./images/shoppingcartbyjotai.png"
 import ExampleRedux from "./images/redux.png"
-const details = [
-  {
-    name: "Consulting Template by Nextjs",
-    link: "https://github.com/devgroves/consultingtemplatebynextjs",
-    description:
-      "A IT consultancy website template with server side rendering to make the page load faster using Next js",
-    id: 1,
-    language: "JavaScript",
-    stars: "1",
-    forks: "1",
-    image: Devgroves,
-  },
-  {
-    id: 2,
-    name: "Shopping Cart by Jotai",
-    description:
-      "Shopping cart example shown in redux offical site is rewritten in jotai to explain the easness and light weightness of the framework",
-    link: "https://github.com/devgroves/shoppingcartbyjotai",
-    language: "JavaScript",
-    stars: "1",
-    forks: "1",
-    image: ShopCart,
-  },
-  {
-    id: 3,
-    name: "Redux Example in Jotai",
-    description: "redux example of cart creation rewritten in jotai",
-    link: "https://github.com/devgroves/reduxexampleinjotai",
-    language: "JavaScript",
-    stars: "",
-    forks: "",
-    image: ExampleRedux,
-  },
-  {
-    id: 4,
-    name: "springmongotutorial",
-    description: "springmongotutorial",
-    link: "https://github.com/devgroves/springmongotutorial",
-    language: "JavaScript",
-    stars: "",
-    forks: "",
-    image: "",
-  },
-  {
-    id: 5,
-    name: "reactmedialightgallery",
-    description:
-      "Media gallery to show and run through the media items in the gallery with full page view. It is done by react as component to use in react web application. It supports media items like image, audio, video.",
-    link: "https://github.com/devgroves/reactmedialightgallery",
-    language: "JavaScript",
-    stars: "",
-    forks: "",
-    image: "https://github.com/devgroves/reactmedialightgallery/raw/main/reactmedialightgallery.png",
-  },
-];
-export default function About() {
+
+export async function getServerSideProps(context) {
+  const res =await fetch("https://api.github.com/users/devgroves/repos")
+  const data = await res.json()
+  return {
+    props: {
+      data
+    }, 
+  };
+}
+export default function About({data}) {
+  console.log('props....', data)
   return (
     <>
       <Head>
         <title>DevGroves - About Us</title>
-        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <html_url rel="icon" href="favicon.ico" type="image/x-icon" />
         <meta
           name="description"
           content=" We contribute open source technical solutions to organizations and learning tutorials for developers to learn."
@@ -100,18 +56,19 @@ export default function About() {
           OUR Public Code Repositories For Glance
         </h3>
         <Row>
-          {details &&
-            details.map((val) => (
+          {data &&
+            data.map((val) => (
               <Col key={val.id} md={6} sm={12}>
                 <Card
                   style={{
                     minHeight: 120,
                     marginTop: 10,
                     backgroundColor: "gainsboro",
+                    borderRadius: 20,
                   }}
                 >
                   <Row>
-                    <Col md={5} >
+                    <Col md={4} style={{ margin:10 }}>
                       <Image
                         src={val.image || Image1}
                         alt="about image"
@@ -120,20 +77,22 @@ export default function About() {
                         className="imgContain"
                       />
                     </Col>
-                    <Col >
+                    <Col>
                       <Card.Body>
-                        <Card.Link href={val.link}>{val.name}</Card.Link>
+                        <Card.Link href={val.html_url}>{val.name}</Card.Link>
                         <Card.Text style={{ fontSize: 12, marginTop: 8 }}>{val.description}</Card.Text>
-                        <div style={{
-                           fontSize: 12,
-                            marginTop: 8 ,
-                            display:'flex',
-                            alignItems:"center",
-                            justifyContent:"space-between" 
-                            }}>
+                        <div
+                          style={{
+                            fontSize: 12,
+                            marginTop: 8,
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "space-between",
+                          }}
+                        >
                           <p>{val.language}</p>
-                          <p> Stars:{val.stars}</p>
-                          <p> Forks:{val.forks}</p>     
+                          <p> Stars:{val.stargazers_count}</p>
+                          <p> Forks:{val.forks}</p>
                         </div>
                       </Card.Body>
                     </Col>

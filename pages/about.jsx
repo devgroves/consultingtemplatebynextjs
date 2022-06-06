@@ -6,9 +6,6 @@ import Head from "next/head";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Breadcrumbs from "../components/Breadcrumbs";
-import Devgroves from "./images/devgroves.png";
-import ShopCart from "./images/shoppingcartbyjotai.png"
-import ExampleRedux from "./images/redux.png"
 
 export async function getServerSideProps(context) {
   const res =await fetch("https://api.github.com/users/devgroves/repos")
@@ -68,13 +65,11 @@ export default function About({data}) {
                   }}
                 >
                   <Row>
-                    <Col md={4} style={{ margin:10 }}>
+                    <Col md={4} style={{ padding: 10,margin:10 ,display:'flex',alignItems:'center',justifyContent:'center'}}>
                       <Image
                         src={val.image || Image1}
                         alt="about image"
-                        height={400}
-                        width={600}
-                        className="imgContain"
+                        width={300}
                       />
                     </Col>
                     <Col>

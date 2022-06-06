@@ -77,7 +77,7 @@ export default function About({data}) {
                     >
                       <Image
                         src={`https://raw.githubusercontent.com/${val.full_name}/main/demo.png` || Image1}
-                        alt="about image"
+                        alt="image"
                         width={300}
                         height={300}
                       />

@@ -65,11 +65,21 @@ export default function About({data}) {
                   }}
                 >
                   <Row>
-                    <Col md={4} style={{ padding: 10,margin:10 ,display:'flex',alignItems:'center',justifyContent:'center'}}>
+                    <Col
+                      md={4}
+                      style={{
+                        padding: 10,
+                        margin: 10,
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                      }}
+                    >
                       <Image
-                        src={val.image || Image1}
+                        src={`https://raw.githubusercontent.com/${val.full_name}/main/demo.png` || Image1}
                         alt="about image"
                         width={300}
+                        height={300}
                       />
                     </Col>
                     <Col>

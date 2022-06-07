@@ -17,7 +17,6 @@ export async function getServerSideProps(context) {
   };
 }
 export default function About({data}) {
-  console.log('props....', data)
   return (
     <>
       <Head>
@@ -79,7 +78,7 @@ export default function About({data}) {
                         src={`https://raw.githubusercontent.com/${val.full_name}/main/demo.png` || Image1}
                         alt="image"
                         width={300}
-                        height={300}
+                        height={250}
                       />
                     </Col>
                     <Col>

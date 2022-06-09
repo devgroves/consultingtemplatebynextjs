@@ -8,11 +8,13 @@ import Header from "../components/Header";
 import Breadcrumbs from "../components/Breadcrumbs";
 
 export async function getServerSideProps(context) {
-  const res =await fetch("https://api.github.com/users/devgroves/repos")
-  const data = await res.json()
+  const res =await fetch("https://api.github.com/users/devgroves/repos");
+  const data = await res.json();
+  console.log('data', data.filter((elem) => !elem.name.includes("tutorial")));
+  const filteredData = data.filter((elem) => !elem.name.includes("tutorial"));
   return {
     props: {
-      data
+      data: filteredData
     }, 
   };
 }

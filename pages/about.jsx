@@ -8,17 +8,20 @@ import Header from "../components/Header";
 import Breadcrumbs from "../components/Breadcrumbs";
 
 export async function getServerSideProps(context) {
-  const res =await fetch("https://api.github.com/users/devgroves/repos");
+  const res = await fetch("https://api.github.com/users/devgroves/repos");
   const data = await res.json();
   console.log('data', data.filter((elem) => !elem.name.includes("tutorial")));
-  const filteredData = data.filter((elem) => !elem.name.includes("tutorial"));
+  const filteredData = data.filter((elem) => !elem.name.includes("tutorial")).map((elem) => {
+    return { id: elem.id, name: elem.name, html_url: elem.html_url, description: elem.description, full_name: elem.full_name,
+       language: elem.language, stargazers_count: elem.stargazers_count, forks: elem.forks };
+  });
   return {
     props: {
       data: filteredData
-    }, 
+    },
   };
 }
-export default function About({data}) {
+export default function About({ data }) {
   return (
     <>
       <Head>

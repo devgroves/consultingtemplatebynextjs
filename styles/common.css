@@ -59,6 +59,10 @@ ul li {
   font-family: sans-serif;
 }
 
+hr {
+  height: 2px;
+}
+
 .mobile-container {
   position: relative;
   text-align: center;

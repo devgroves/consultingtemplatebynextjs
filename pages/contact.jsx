@@ -22,7 +22,7 @@ export default function Contact() {
       <Container>
         <Row className="center container-height">
         <Col md={6} sm={12} className="mobile-container">
-            <Image src={ContactUsImage} alt="Contact us image" height={400} width={600} className="imgContain" />
+            <Image src={ContactUsImage} alt="Contact us image" height={400} width={600} placeholder="blur" className="imgContain" />
             <Breadcrumbs name="Contact us" />
           </Col>
           <Col className="zeropadding" md={6} sm={12}>

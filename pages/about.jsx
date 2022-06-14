@@ -12,8 +12,10 @@ export async function getServerSideProps(context) {
   const data = await res.json();
   console.log('data', data.filter((elem) => !elem.name.includes("tutorial")));
   const filteredData = data.filter((elem) => !elem.name.includes("tutorial")).map((elem) => {
-    return { id: elem.id, name: elem.name, html_url: elem.html_url, description: elem.description, full_name: elem.full_name,
-       language: elem.language, stargazers_count: elem.stargazers_count, forks: elem.forks };
+    return {
+      id: elem.id, name: elem.name, html_url: elem.html_url, description: elem.description, full_name: elem.full_name,
+      language: elem.language, stargazers_count: elem.stargazers_count, forks: elem.forks
+    };
   });
   return {
     props: {
@@ -41,8 +43,8 @@ export default function About({ data }) {
       <Header />
       <Container>
         <Row className="center container-height">
-          <Col md={6} sm={12} className="mobile-container">
-            <Image src={Image1} alt="about image"  />
+          <Col md={6} sm={12} className="mobile-container"  style={{paddingRight: 20}}>
+            <Image src={Image1} alt="about image" height={400} width={600} layout="responsive" placeholder="blur" />
             <Breadcrumbs name="About Us" />
           </Col>
           <Col md={6} sm={12}>

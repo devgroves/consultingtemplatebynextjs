@@ -68,6 +68,7 @@ hr {
   text-align: center;
   color: white;
   padding-top: 10px;
+  margin-bottom: 20px;
 }
 .centered {
   position: absolute;
@@ -92,6 +93,14 @@ hr {
   display: flex;
 }
 
+.projectCard {
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media only screen and (max-width: 768px) {
   .navbar-bg {
     background-color: white;
@@ -101,5 +110,9 @@ hr {
 
   .container-height .contentpadding {
     padding: 20px 10px;
+  }
+
+  .projectCard {
+    margin: 0;
   }
 }

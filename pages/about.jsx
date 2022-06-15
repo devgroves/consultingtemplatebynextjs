@@ -43,11 +43,11 @@ export default function About({ data }) {
       <Header />
       <Container>
         <Row className="center container-height">
-          <Col md={6} sm={12} className="mobile-container"  style={{paddingRight: 20}}>
-            <Image src={Image1} alt="about image" height={400} width={600} layout="responsive" placeholder="blur" />
+          <Col md={6} sm={12} className="mobile-container"  >
+            <Image src={Image1} alt="about image" height={400} width={600} className="imgContain" placeholder="blur" />
             <Breadcrumbs name="About Us" />
           </Col>
-          <Col md={6} sm={12}>
+          <Col  className="zeropadding" md={6} sm={12}>
             <h3> We contribute open source technical solutions and learning tutorials for developers to learn.</h3>
             <br />
             <p style={{ textAlign: "justify" }}>
@@ -55,9 +55,11 @@ export default function About({ data }) {
             </p>
           </Col>
         </Row>
-        <h3 style={{ textAlign: "center", textDecoration: "underline", marginTop: 10 }}>
-          OUR Public Code Repositories For Glance
-        </h3>
+        <Row>
+          <h3 style={{ textAlign: "center", textDecoration: "underline", marginTop: 10 }}>
+            OUR Public Code Repositories For Glance
+          </h3>
+        </Row>
         <Row>
           {data &&
             data.map((val) => (
@@ -66,20 +68,14 @@ export default function About({ data }) {
                   style={{
                     minHeight: 120,
                     marginTop: 10,
-                    backgroundColor: "gainsboro",
+                    backgroundColor: "whitesmoke",
                     borderRadius: 20,
                   }}
                 >
                   <Row>
                     <Col
                       md={4}
-                      style={{
-                        padding: 10,
-                        margin: 10,
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                      }}
+                      className="projectCard"
                     >
                       <Image
                         src={`https://raw.githubusercontent.com/${val.full_name}/main/demo.png` || Image1}
@@ -88,7 +84,7 @@ export default function About({ data }) {
                         height={250}
                       />
                     </Col>
-                    <Col>
+                    <Col md={6}>
                       <Card.Body>
                         <Card.Link href={val.html_url}>{val.name}</Card.Link>
                         <Card.Text style={{ fontSize: 12, marginTop: 8 }}>{val.description}</Card.Text>

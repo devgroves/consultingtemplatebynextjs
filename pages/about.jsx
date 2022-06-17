@@ -7,11 +7,22 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Breadcrumbs from "../components/Breadcrumbs";
 
+function isReadyProject(elem) {
+  let topics = elem.topics;
+  let result = true;
+  topics.forEach((topicName) => {
+    if (topicName.search("wip-do-not-use") >= 0) {
+      result = false;
+    }
+  });
+  return result;
+}
+
 export async function getServerSideProps(context) {
   const res = await fetch("https://api.github.com/users/devgroves/repos");
   const data = await res.json();
-  console.log('data', data.filter((elem) => !elem.name.includes("tutorial")));
-  const filteredData = data.filter((elem) => !elem.name.includes("tutorial")).map((elem) => {
+  // console.log('data', data.filter((elem) => !elem.name.includes("tutorial")));
+  const filteredData = data.filter(elem => isReadyProject(elem)).map((elem) => {
     return {
       id: elem.id, name: elem.name, html_url: elem.html_url, description: elem.description, full_name: elem.full_name,
       language: elem.language, stargazers_count: elem.stargazers_count, forks: elem.forks

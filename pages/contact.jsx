@@ -49,11 +49,11 @@ export default function Contact() {
           <Col>
             <div className="form-container">
               <form>
-                <label htmlFor="fname">Name</label>
-                <input type="text" id="fname" name="firstname" placeholder="Your name.." />
+                <label htmlFor="name">Name</label>
+                <input type="text" id="name" name="firstname" placeholder="Your name.." />
 
                 <label htmlFor="number">Contact Number</label>
-                <input type="text" id="number" name="number" placeholder="Your number" />
+                <input type="number" id="number" name="number" placeholder="Your number" />
 
                 <label htmlFor="email">Email</label>
                 <input type="email" id="email" name="email" placeholder="Your email" />
@@ -63,7 +63,7 @@ export default function Contact() {
 
                 <label htmlFor="subject">Description</label>
                 <textarea id="subject" name="subject" placeholder="Write something..">
-                  
+
                 </textarea>
 
                 <input type="submit" value="Submit" />

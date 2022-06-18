@@ -84,11 +84,11 @@ hr {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
-  width: 95%;
+  width: 96%;
   padding: 20px;
   text-align: center;
   justify-content: center;
-  height: 95%;
+  height: 96%;
   align-items: center;
   display: flex;
 }

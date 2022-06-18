@@ -6,6 +6,7 @@ import Head from "next/head";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Breadcrumbs from "../components/Breadcrumbs";
+import { GoPrimitiveDot, GoStar, GoRepoForked } from "react-icons/go";
 
 function isReadyProject(elem) {
   let topics = elem.topics;
@@ -54,11 +55,11 @@ export default function About({ data }) {
       <Header />
       <Container>
         <Row className="center container-height">
-          <Col md={6} sm={12} className="mobile-container"  >
+          <Col md={6} sm={12} className="mobile-container">
             <Image src={Image1} alt="about image" height={400} width={600} className="imgContain" placeholder="blur" />
             <Breadcrumbs name="About Us" />
           </Col>
-          <Col  className="zeropadding" md={6} sm={12}>
+          <Col className="zeropadding" md={6} sm={12}>
             <h3> We contribute open source technical solutions and learning tutorials for developers to learn.</h3>
             <br />
             <p style={{ textAlign: "justify" }}>
@@ -84,10 +85,7 @@ export default function About({ data }) {
                   }}
                 >
                   <Row>
-                    <Col
-                      md={4}
-                      className="projectCard"
-                    >
+                    <Col md={4} className="projectCard">
                       <Image
                         src={`https://raw.githubusercontent.com/${val.full_name}/main/demo.png` || Image1}
                         alt="image"
@@ -108,9 +106,11 @@ export default function About({ data }) {
                             justifyContent: "space-between",
                           }}
                         >
-                          <p>{val.language}</p>
-                          <p> Stars:{val.stargazers_count}</p>
-                          <p> Forks:{val.forks}</p>
+                          <p>
+                            <GoPrimitiveDot /> {val.language}
+                          </p>
+                          <p><GoStar />  Stars:{val.stargazers_count}</p>
+                          <p><GoRepoForked /> Forks:{val.forks}</p>
                         </div>
                       </Card.Body>
                     </Col>

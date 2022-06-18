@@ -68,22 +68,13 @@ export default function About({ data }) {
           </Col>
         </Row>
         <Row>
-          <h3 style={{ textAlign: "center", textDecoration: "underline", marginTop: 10 }}>
-            OUR Public Code Repositories For Glance
-          </h3>
+          <h3 className="repo-header">OUR Public Code Repositories For Glance</h3>
         </Row>
         <Row>
           {data &&
             data.map((val) => (
               <Col key={val.id} md={6} sm={12}>
-                <Card
-                  style={{
-                    minHeight: 120,
-                    marginTop: 10,
-                    backgroundColor: "whitesmoke",
-                    borderRadius: 20,
-                  }}
-                >
+                <Card className="repo-card">
                   <Row>
                     <Col md={4} className="projectCard">
                       <Image
@@ -96,21 +87,17 @@ export default function About({ data }) {
                     <Col md={6}>
                       <Card.Body>
                         <Card.Link href={val.html_url}>{val.name}</Card.Link>
-                        <Card.Text style={{ fontSize: 12, marginTop: 8 }}>{val.description}</Card.Text>
-                        <div
-                          style={{
-                            fontSize: 12,
-                            marginTop: 8,
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "space-between",
-                          }}
-                        >
+                        <Card.Text className="projectCard-text">{val.description}</Card.Text>
+                        <div className="projectCard-body">
                           <p>
                             <GoPrimitiveDot /> {val.language}
                           </p>
-                          <p><GoStar />  Stars:{val.stargazers_count}</p>
-                          <p><GoRepoForked /> Forks:{val.forks}</p>
+                          <p>
+                            <GoStar /> Stars:{val.stargazers_count}
+                          </p>
+                          <p>
+                            <GoRepoForked /> Forks:{val.forks}
+                          </p>
                         </div>
                       </Card.Body>
                     </Col>

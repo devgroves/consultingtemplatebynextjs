@@ -116,3 +116,30 @@ hr {
     margin: 0;
   }
 }
+
+
+.repo-card {
+  min-width: 120px;
+  margin-top: 10px;
+  background-color: whitesmoke;
+  border-radius: 20px;
+}
+
+.projectCard-body {
+  font-size: 12px;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.projectCard-text {
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+.repo-header {
+  text-align: center;
+  text-decoration: underline;
+  margin-top: 10px;
+}

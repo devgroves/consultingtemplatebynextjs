@@ -15,7 +15,15 @@ export default function Contact() {
      handleSubmit,
      formState: { errors },
    } = useForm();
-   const onSubmit = (data) => console.log(data);
+   const onSubmit =async (data) => {
+    console.log('data', data)
+    const res = await fetch("/api/contact", {
+      method: "post",
+      body: JSON.stringify(data),
+    });
+    const result = await res.json();
+    alert(`Thanks you`);
+   }
   return (
     <>
       <Head>
@@ -40,23 +48,10 @@ export default function Contact() {
             />
             <Breadcrumbs name="Contact us" />
           </Col>
-          <Col className="zeropadding" md={6} sm={12}>
-            <h4>Email Id:</h4> <span>devgrovestechnologies@gmail.com</span>
-            <br />
-            <br />
-            <h4>Contact Us:</h4> +91-96292-30494
-            <br />
-            <br />
-          </Col>
-        </Row>
-        <Row>
-          <Col className="center">
-            <Image src={FormImage} alt=" form image" />
-          </Col>
           <Col>
             <div className="form-container">
               <form onSubmit={handleSubmit(onSubmit)}>
-                <label htmlFor="name">Name</label>
+              
                 <input
                   type="text"
                   id="name"
@@ -64,9 +59,9 @@ export default function Contact() {
                   placeholder="Your name.."
                   {...register("name", { required: true })}
                 />
-                {errors.name && <><span> * This field is required</span><br /></>}
+               
 
-                <label htmlFor="number">Contact Number</label>
+               
                 <input
                   type="number"
                   id="number"
@@ -75,7 +70,7 @@ export default function Contact() {
                   {...register("number", { required: true })}
                 />
 
-                <label htmlFor="email">Email</label>
+              
                 <input
                   type="email"
                   id="email"
@@ -84,7 +79,7 @@ export default function Contact() {
                   {...register("email", { required: true })}
                 />
 
-                <label htmlFor="file">Attachment</label>
+             
                 <input
                   type="file"
                   id="file"
@@ -93,7 +88,7 @@ export default function Contact() {
                   {...register("file", { required: true })}
                 />
 
-                <label htmlFor="subject">Description</label>
+                
                 <textarea
                   id="subject"
                   name="subject"
@@ -106,6 +101,16 @@ export default function Contact() {
             </div>
           </Col>
         </Row>
+        <div>
+          <div className="zeropadding" md={6} sm={12}>
+            <h4>Email Id:</h4> <span>devgrovestechnologies@gmail.com</span>
+            <br />
+            <br />
+            <h4>Contact Us:</h4> +91-96292-30494
+            <br />
+            <br />
+          </div>
+        </div>
       </Container>
       <Footer />
     </>

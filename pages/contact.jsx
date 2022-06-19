@@ -6,7 +6,6 @@ import { Container, Row, Col } from "react-bootstrap";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Breadcrumbs from "../components/Breadcrumbs";
-import FormImage from "./images/contact-form.png"
 
 export default function Contact() {
   return (
@@ -33,6 +32,27 @@ export default function Contact() {
             />
             <Breadcrumbs name="Contact us" />
           </Col>
+          <Col>
+            <div className="form-container">
+              <form>
+                <input type="text" id="name" name="firstname" placeholder="Your name.." required />
+
+                <input type="number" id="number" name="number" placeholder="Your number" required 
+                
+                minLength={10}/>
+
+                <input type="email" id="email" name="email" placeholder="Your email" required />
+
+                <input type="file" id="file" name="file" placeholder="Attach Your file" required />
+
+                <textarea id="subject" name="subject" placeholder="Write something.." required></textarea>
+
+                <input type="submit" value="Submit" />
+              </form>
+            </div>
+          </Col>
+        </Row>
+        <Row>
           <Col className="zeropadding" md={6} sm={12}>
             <h4>Email Id:</h4> <span>devgrovestechnologies@gmail.com</span>
             <br />
@@ -40,35 +60,6 @@ export default function Contact() {
             <h4>Contact Us:</h4> +91-96292-30494
             <br />
             <br />
-          </Col>
-        </Row>
-        <Row>
-          <Col className="center">
-            <Image src={FormImage}  alt=" form image" />
-          </Col>
-          <Col>
-            <div className="form-container">
-              <form>
-                <label htmlFor="name">Name</label>
-                <input type="text" id="name" name="firstname" placeholder="Your name.." />
-
-                <label htmlFor="number">Contact Number</label>
-                <input type="number" id="number" name="number" placeholder="Your number" />
-
-                <label htmlFor="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Your email" />
-
-                <label htmlFor="file">Attachment</label>
-                <input type="file" id="file" name="file" placeholder="Attach Your file" />
-
-                <label htmlFor="subject">Description</label>
-                <textarea id="subject" name="subject" placeholder="Write something..">
-
-                </textarea>
-
-                <input type="submit" value="Submit" />
-              </form>
-            </div>
           </Col>
         </Row>
       </Container>

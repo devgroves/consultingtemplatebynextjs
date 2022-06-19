@@ -6,23 +6,16 @@ import { Container, Row, Col } from "react-bootstrap";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Breadcrumbs from "../components/Breadcrumbs";
-import FormImage from "./images/contact-form.png"
-import { useForm } from "react-hook-form";
 
 export default function Contact() {
-   const {
-     register,
-     handleSubmit,
-     formState: { errors },
-   } = useForm();
-   const onSubmit =async (data) => {
+   const handleSubmit =async (data) => {
     console.log('data', data)
     const res = await fetch("/api/contact", {
       method: "post",
       body: JSON.stringify(data),
     });
     const result = await res.json();
-    alert(`Thanks you`);
+    console.log("handle submit ", result);
    }
   return (
     <>
@@ -50,14 +43,16 @@ export default function Contact() {
           </Col>
           <Col>
             <div className="form-container">
-              <form onSubmit={handleSubmit(onSubmit)}>
+              <form onSubmit={handleSubmit}>
               
                 <input
                   type="text"
                   id="name"
                   name="firstname"
-                  placeholder="Your name.."
-                  {...register("name", { required: true })}
+                  className="formItem"
+                  placeholder="Your name please.."
+                  height="2"
+                  required
                 />
                
 
@@ -66,8 +61,9 @@ export default function Contact() {
                   type="number"
                   id="number"
                   name="number"
-                  placeholder="Your number"
-                  {...register("number", { required: true })}
+                  placeholder="Contact number"
+                  className="formItem halfWidth"
+                  required
                 />
 
               
@@ -75,8 +71,9 @@ export default function Contact() {
                   type="email"
                   id="email"
                   name="email"
-                  placeholder="Your email"
-                  {...register("email", { required: true })}
+                  className="formItem halfWidth"
+                  placeholder="Email Id.."
+                  required
                 />
 
              
@@ -84,16 +81,17 @@ export default function Contact() {
                   type="file"
                   id="file"
                   name="file"
+                  className="formItem"
                   placeholder="Attach Your file"
-                  {...register("file", { required: true })}
+                  required
                 />
 
                 
                 <textarea
                   id="subject"
                   name="subject"
-                  placeholder="Write something.."
-                  {...register("subject", { required: true })}
+                  placeholder="Please drop in your questions.."
+                  required
                 ></textarea>
 
                 <input type="submit" value="Submit" />

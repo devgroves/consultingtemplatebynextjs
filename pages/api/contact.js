@@ -15,7 +15,7 @@ export default function handler(req, res) {
   const mailOptions = {
     from: "",
     to: "",
-    subject: "Contact form",
+    subject: "Contact form from devgroves",
     text: body,
   };
 

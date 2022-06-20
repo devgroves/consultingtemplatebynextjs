@@ -1,4 +1,4 @@
-import React from "react";
+import React ,{ useState }from "react";
 import Image from "next/image";
 import Head from "next/head";
 import ContactUsImage from "./images/contactus.png";
@@ -8,8 +8,20 @@ import Header from "../components/Header";
 import Breadcrumbs from "../components/Breadcrumbs";
 
 export default function Contact() {
-   const handleSubmit =async (data) => {
-    console.log('data', data)
+  const [name ,setName]=useState('');
+  const [email,setEmail]=useState('');
+  const [number,setNumber]=useState();
+  const [file,setFile]=useState();
+  const [message,setMessage]=useState('')
+
+   const handleSubmit =async (event) => {
+    const data = {
+      "name":name,
+      "email":email,
+      "number":number,
+      "file":file,
+      "message":message
+    }
     const res = await fetch("/api/contact", {
       method: "post",
       body: JSON.stringify(data),
@@ -44,57 +56,81 @@ export default function Contact() {
           <Col>
             <div className="form-container">
               <form onSubmit={handleSubmit}>
-              
-                <input
-                  type="text"
-                  id="name"
-                  name="firstname"
-                  className="formItem"
-                  placeholder="Your name please.."
-                  height="2"
-                  required
-                />
-               
+                <Row>
+                  <Col>
+                    <input
+                      type="text"
+                      id="name"
+                      name="firstname"
+                      onChange={(e) => {
+                        setName(e.target.value);
+                      }}
+                      placeholder="Your name please.."
+                      height="2"
+                      required
+                    />
+                  </Col>
+                </Row>
 
-               
-                <input
-                  type="number"
-                  id="number"
-                  name="number"
-                  placeholder="Contact number"
-                  className="formItem halfWidth"
-                  required
-                />
+                <Row>
+                  <Col md={6} sm={12}>
+                    <input
+                      type="number"
+                      id="number"
+                      name="number"
+                      placeholder="Contact number"
+                      required
+                      onChange={(e) => {
+                        setNumber(e.target.value);
+                      }}
+                    />
+                  </Col>
+                  <Col md={6} sm={12}>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="Email Id.."
+                      required
+                      onChange={(e) => {
+                        setEmail(e.target.value);
+                      }}
+                    />
+                  </Col>
+                </Row>
 
-              
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  className="formItem halfWidth"
-                  placeholder="Email Id.."
-                  required
-                />
-
-             
-                <input
-                  type="file"
-                  id="file"
-                  name="file"
-                  className="formItem"
-                  placeholder="Attach Your file"
-                  required
-                />
-
-                
-                <textarea
-                  id="subject"
-                  name="subject"
-                  placeholder="Please drop in your questions.."
-                  required
-                ></textarea>
-
-                <input type="submit" value="Submit" />
+                <Row className="formItem">
+                  <Col>
+                    <input
+                      type="file"
+                      id="file"
+                      name="file"
+                      placeholder="Attach Your file"
+                      required
+                      onChange={(e) => {
+                        setFile(e.target.value);
+                      }}
+                    />
+                  </Col>
+                </Row>
+                <Row>
+                  <Col>
+                    <textarea
+                      id="subject"
+                      name="subject"
+                      placeholder="Please drop in your questions.."
+                      required
+                      onChange={(e) => {
+                        setMessage(e.target.value);
+                      }}
+                    ></textarea>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col>
+                    <input type="submit" value="Submit" />
+                  </Col>
+                </Row>
               </form>
             </div>
           </Col>

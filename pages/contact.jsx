@@ -15,6 +15,7 @@ export default function Contact() {
   const [message,setMessage]=useState('')
 
    const handleSubmit =async (event) => {
+    event.preventDefault();
     const data = {
       "name":name,
       "email":email,
@@ -106,7 +107,6 @@ export default function Contact() {
                       id="file"
                       name="file"
                       placeholder="Attach Your file"
-                      required
                       onChange={(e) => {
                         setFile(e.target.value);
                       }}

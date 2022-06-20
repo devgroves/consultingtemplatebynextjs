@@ -215,3 +215,9 @@ input.formItem {
 input.halfWidth {
   width: 45%;
 }
+
+.contact-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

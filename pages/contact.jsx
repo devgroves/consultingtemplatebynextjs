@@ -136,13 +136,17 @@ export default function Contact() {
           </Col>
         </Row>
         <div>
-          <div className="zeropadding" md={6} sm={12}>
-            <h4>Email Id:</h4> <span>devgrovestechnologies@gmail.com</span>
-            <br />
-            <br />
-            <h4>Contact Us:</h4> +91-96292-30494
-            <br />
-            <br />
+          <div>
+            <Row>
+              <Col md={6} sm={12} className="contact-col">
+                <h6>
+                  Email Id: devgrovestechnologies@gmail.com
+                </h6>
+              </Col>
+              <Col md={6} sm={12} className="contact-col">
+                <h6>Contact Us: +91-96292-30494</h6>
+              </Col>
+            </Row>
           </div>
         </div>
       </Container>

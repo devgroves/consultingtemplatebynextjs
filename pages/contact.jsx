@@ -139,12 +139,10 @@ export default function Contact() {
           <div>
             <Row>
               <Col md={6} sm={12} className="contact-col">
-                <h6>
-                  Email Id: devgrovestechnologies@gmail.com
-                </h6>
+                <h6>Write us: devgrovestechnologies@gmail.com </h6>
               </Col>
               <Col md={6} sm={12} className="contact-col">
-                <h6>Contact Us: +91-96292-30494</h6>
+                <h6>Call us @ +91-96292-30494</h6>
               </Col>
             </Row>
           </div>

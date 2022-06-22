@@ -135,17 +135,16 @@ export default function Contact() {
             </div>
           </Col>
         </Row>
-        <div>
-          <div>
-            <Row>
-              <Col md={6} sm={12} className="contact-col">
-                <h6>Write us: devgrovestechnologies@gmail.com </h6>
-              </Col>
-              <Col md={6} sm={12} className="contact-col">
-                <h6>Call us @ +91-96292-30494</h6>
-              </Col>
-            </Row>
-          </div>
+
+        <div className="contact-col-details">
+          <Row>
+            <Col md={6} sm={12} className="contact-col">
+              <h6>Write us: devgrovestechnologies@gmail.com </h6>
+            </Col>
+            <Col md={6} sm={12} className="contact-col">
+              <h6>Call us @ +91-96292-30494</h6>
+            </Col>
+          </Row>
         </div>
       </Container>
       <Footer />

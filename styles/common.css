@@ -18,7 +18,6 @@
   padding: 0;
 }
 
-
 .container-height .contentpadding {
   padding: 0;
 }
@@ -117,7 +116,6 @@ hr {
   }
 }
 
-
 .repo-card {
   min-width: 120px;
   margin-top: 10px;
@@ -146,9 +144,11 @@ hr {
 
 /* Contact form  */
 
-input[type=text], select, textarea {
+input[type="text"],
+select,
+textarea {
   width: 100%;
-  padding: 12px;
+  padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
@@ -156,9 +156,11 @@ input[type=text], select, textarea {
   margin-bottom: 16px;
   resize: vertical;
 }
-input[type=email], select, textarea {
+input[type="email"],
+select,
+textarea {
   width: 100%;
-  padding: 12px;
+  padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
@@ -166,9 +168,11 @@ input[type=email], select, textarea {
   margin-bottom: 16px;
   resize: vertical;
 }
-input[type=number], select, textarea {
+input[type="number"],
+select,
+textarea {
   width: 100%;
-  padding: 12px;
+  padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
@@ -176,9 +180,11 @@ input[type=number], select, textarea {
   margin-bottom: 16px;
   resize: vertical;
 }
-input[type=file], select, textarea {
+input[type="file"],
+select,
+textarea {
   width: 100%;
-  padding: 12px;
+  padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
@@ -187,8 +193,8 @@ input[type=file], select, textarea {
   resize: vertical;
 }
 
-input[type=submit] {
-  background-color: #04AA6D;
+input[type="submit"] {
+  background-color: #04aa6d;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -196,16 +202,16 @@ input[type=submit] {
   cursor: pointer;
 }
 
-input[type=submit]:hover {
+input[type="submit"]:hover {
   background-color: #45a049;
 }
 
 .form-container {
   border-radius: 5px;
   background-color: #fafafa;
-  margin: 10px;
+  /* margin: 10px; */
   /* padding:50px; */
-  max-height: 450px;
+  /* max-height: 450px; */
 }
 
 input.formItem {
@@ -221,10 +227,11 @@ input.halfWidth {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #808080;
+  color: white;
 }
 
 .contact-col-details {
-      padding: 30px;
-    background: whitesmoke;
+  padding: 30px;
+  background: silver;
+  margin-top: 10px;
 }

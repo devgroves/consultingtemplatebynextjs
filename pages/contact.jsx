@@ -57,6 +57,7 @@ export default function Contact() {
           <Col>
             <div className="form-container">
               <form onSubmit={handleSubmit}>
+                <h5>Please fill in the form, we will get back to you </h5>
                 <Row>
                   <Col>
                     <input
@@ -67,7 +68,7 @@ export default function Contact() {
                         setName(e.target.value);
                       }}
                       placeholder="Your name please.."
-                      height="2"
+                      height="1"
                       required
                     />
                   </Col>
@@ -137,14 +138,14 @@ export default function Contact() {
         </Row>
 
         <div className="contact-col-details">
-          <Row>
-            <Col md={6} sm={12} className="contact-col">
-              <h6>Write us: devgrovestechnologies@gmail.com </h6>
-            </Col>
-            <Col md={6} sm={12} className="contact-col">
-              <h6>Call us @ +91-96292-30494</h6>
-            </Col>
-          </Row>
+          <div className="center">
+            <div md={6} sm={12} className="contact-col">
+              <h6>
+                Write to us: <a href="mailto:devgrovestechnologies@gmail.com">devgrovestechnologies@gmail.com</a> { ' '}
+                or Call us @ <a href="tel:+919629230494">+91-96292-30494</a>
+              </h6>
+            </div>
+          </div>
         </div>
       </Container>
       <Footer />

@@ -12,7 +12,8 @@ export default function Contact() {
   const [email,setEmail]=useState('');
   const [number,setNumber]=useState();
   const [file,setFile]=useState();
-  const [message,setMessage]=useState('')
+  const [message,setMessage]=useState('');
+  const [showSuccess, setShowSuccess]=useState(false);
 
    const handleSubmit =async (event) => {
     event.preventDefault();
@@ -28,6 +29,8 @@ export default function Contact() {
       body: JSON.stringify(data),
     });
     const result = await res.json();
+    setShowSuccess(true);
+    setTimeout(()=> setShowSuccess(false), 2000);
     console.log("handle submit ", result);
    }
   return (
@@ -42,7 +45,7 @@ export default function Contact() {
       </Head>
       <Header />
       <Container>
-        <Row className="center container-height">
+        <Row className="center container-height zero-margin contactform-bg">
           <Col md={6} sm={12} className="mobile-container">
             <Image
               src={ContactUsImage}
@@ -57,7 +60,7 @@ export default function Contact() {
           <Col>
             <div className="form-container">
               <form onSubmit={handleSubmit}>
-                <h5>Please fill in the form, we will get back to you </h5>
+                <h5>Please fill in the form, we will get back to you ... </h5>
                 <Row>
                   <Col>
                     <input
@@ -135,13 +138,14 @@ export default function Contact() {
               </form>
             </div>
           </Col>
+          <p className="aligncenter">{ showSuccess? "We noted the details, thanks for your time!": "" }</p>
         </Row>
 
         <div className="contact-col-details">
           <div className="center">
             <div md={6} sm={12} className="contact-col">
               <h6>
-                Write to us: <a href="mailto:devgrovestechnologies@gmail.com">devgrovestechnologies@gmail.com</a> { ' '}
+                Write to us: <a href="mailto:devgrovestechnologies@gmail.com">devgrovestechnologies@gmail.com</a> {' '}
                 or Call us @ <a href="tel:+919629230494">+91-96292-30494</a>
               </h6>
             </div>

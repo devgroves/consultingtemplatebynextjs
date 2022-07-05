@@ -18,6 +18,11 @@
   padding: 0;
 }
 
+.contactform-bg {
+  background-color: #fafafa;
+  margin: 0 !important;
+}
+
 .container-height .contentpadding {
   padding: 0;
 }
@@ -207,11 +212,7 @@ input[type="submit"]:hover {
 }
 
 .form-container {
-  border-radius: 5px;
   background-color: #fafafa;
-  /* margin: 10px; */
-  /* padding:50px; */
-  /* max-height: 450px; */
 }
 
 input.formItem {
@@ -232,6 +233,14 @@ input.halfWidth {
 
 .contact-col-details {
   padding: 30px;
-  background: silver;
+  background: cadetblue;
   margin-top: 10px;
+}
+
+.contact-col-details a{
+  color: white;
+}
+
+.aligncenter {
+  text-align: center;
 }

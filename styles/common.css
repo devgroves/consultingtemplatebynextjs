@@ -18,6 +18,10 @@
   padding: 0;
 }
 
+.contactform-bg {
+  background-color: #fafafa;
+  margin: 0 !important;
+}
 
 .container-height .contentpadding {
   padding: 0;
@@ -84,11 +88,11 @@ hr {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
-  width: 96%;
+  width: 100vw;
   padding: 20px;
   text-align: center;
   justify-content: center;
-  height: 96%;
+  height: 100%;
   align-items: center;
   display: flex;
 }
@@ -116,7 +120,6 @@ hr {
     margin: 0;
   }
 }
-
 
 .repo-card {
   min-width: 120px;
@@ -146,9 +149,11 @@ hr {
 
 /* Contact form  */
 
-input[type=text], select, textarea {
+input[type="text"],
+select,
+textarea {
   width: 100%;
-  padding: 12px;
+  padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
@@ -156,9 +161,11 @@ input[type=text], select, textarea {
   margin-bottom: 16px;
   resize: vertical;
 }
-input[type=email], select, textarea {
+input[type="email"],
+select,
+textarea {
   width: 100%;
-  padding: 12px;
+  padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
@@ -166,9 +173,11 @@ input[type=email], select, textarea {
   margin-bottom: 16px;
   resize: vertical;
 }
-input[type=number], select, textarea {
+input[type="number"],
+select,
+textarea {
   width: 100%;
-  padding: 12px;
+  padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
@@ -176,9 +185,11 @@ input[type=number], select, textarea {
   margin-bottom: 16px;
   resize: vertical;
 }
-input[type=file], select, textarea {
+input[type="file"],
+select,
+textarea {
   width: 100%;
-  padding: 12px;
+  padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
@@ -187,8 +198,8 @@ input[type=file], select, textarea {
   resize: vertical;
 }
 
-input[type=submit] {
-  background-color: #04AA6D;
+input[type="submit"] {
+  background-color: #04aa6d;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -196,12 +207,40 @@ input[type=submit] {
   cursor: pointer;
 }
 
-input[type=submit]:hover {
+input[type="submit"]:hover {
   background-color: #45a049;
 }
 
 .form-container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
+  background-color: #fafafa;
+}
+
+input.formItem {
+  padding: 5px;
+  margin: 10px;
+}
+
+input.halfWidth {
+  width: 45%;
+}
+
+.contact-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.contact-col-details {
+  padding: 30px;
+  background: cadetblue;
+  margin-top: 10px;
+}
+
+.contact-col-details a{
+  color: white;
+}
+
+.aligncenter {
+  text-align: center;
 }

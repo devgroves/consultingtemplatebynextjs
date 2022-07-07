@@ -6,8 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "install": "npm i --force"
+    "lint": "next lint"
   },
   "dependencies": {
     "bootstrap": "^5.1.3",

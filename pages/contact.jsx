@@ -144,10 +144,10 @@ export default function Contact() {
         <div className="contact-col-details">
           <div className="center">
             <div md={6} sm={12} className="contact-col">
-              <h3>
+              <h4>
                 Write to us: <a href="mailto:devgrovestechnologies@gmail.com">devgrovestechnologies@gmail.com</a> {' '}
                 or Call us @ <a href="tel:+919629230494">+91-96292-30494</a>
-              </h3>
+              </h4>
             </div>
           </div>
         </div>

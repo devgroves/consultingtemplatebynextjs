@@ -3,7 +3,7 @@ import nodemailer from "nodemailer";
 
 export default function handler(req, res) {
   const body = JSON.parse(req.body);
-  console.log(body);
+  console.log(body.message);
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
@@ -13,10 +13,10 @@ export default function handler(req, res) {
   });
 
   const mailOptions = {
-    from: "",
-    to: "",
+    from: "nagappan08@gmail.com",
+    to: "devgrovestechnologies@gmail.com",
     subject: "Contact form from devgroves",
-    text: body,
+    text: body.message,
   };
 
   transporter.sendMail(mailOptions, function (error, info) {

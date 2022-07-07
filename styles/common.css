@@ -233,12 +233,15 @@ input.halfWidth {
 
 .contact-col-details {
   padding: 30px;
-  background: cadetblue;
-  margin-top: 10px;
+  background: whitesmoke;
 }
 
 .contact-col-details a{
-  color: white;
+  color: cadetblue;
+}
+
+.contact-col-details h3{
+  color: cadetblue;
 }
 
 .aligncenter {

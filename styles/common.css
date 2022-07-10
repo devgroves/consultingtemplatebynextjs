@@ -173,7 +173,7 @@ textarea {
   margin-bottom: 16px;
   resize: vertical;
 }
-input[type="number"],
+input[type="tel"],
 select,
 textarea {
   width: 100%;

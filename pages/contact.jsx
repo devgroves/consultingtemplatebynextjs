@@ -80,7 +80,7 @@ export default function Contact() {
                 <Row>
                   <Col md={6} sm={12}>
                     <input
-                      type="number"
+                      type="tel"
                       id="number"
                       name="number"
                       placeholder="Contact number"
